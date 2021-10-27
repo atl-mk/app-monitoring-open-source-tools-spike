@@ -1,0 +1,11 @@
+global:
+  scrape_interval:     1s # Only for testing, normally 15s
+scrape_configs: 
+  - 
+    job_name: atlmetrics
+    metrics_path: '/metrics'
+    static_configs: 
+      - 
+        targets: 
+          - "localhost:9000"
+          - "localhost:9001"
